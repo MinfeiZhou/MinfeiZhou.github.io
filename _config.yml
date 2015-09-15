@@ -1,6 +1,6 @@
-title:            周敏菲的个人主页
-description:      Describe your website here.
-disqus_shortname: hpstrtheme
+title:            zmf
+description:      zmf的个人主页
+disqus_shortname: minfeizhou
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
@@ -9,9 +9,9 @@ url:
 
 # Owner/author information
 owner:
-  name:           周敏菲
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  name:           zmf
+  avatar:         main.jpg
+  bio:            "传说中的个人简介"
   email:          chisifang@163.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
