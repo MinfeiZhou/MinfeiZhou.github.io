@@ -5,7 +5,7 @@ description: "Custom written post descriptions are the way to go... if you're no
 tags: [sample post, video]
 ---
 
-<iframe width="560" height="338" src="http://player.youku.com/embed/XODAzNDc1MTEy" frameborder="0"> </iframe>
+<iframe width="600" height="338" src="http://player.youku.com/embed/XODAzNDc1MTEy" frameborder="0"> </iframe>
 
 Video embeds are responsive and scale with the width of the main content block with the help of [FitVids](http://fitvidsjs.com/).
 
