@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About the Jekyll Theme
+title: 一个程序猿的个人介绍
 comments: false
-modified: 2014-12-24
+modified: 2015-11-17
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
