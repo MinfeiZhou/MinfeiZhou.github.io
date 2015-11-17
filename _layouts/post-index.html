@@ -12,7 +12,7 @@
 {% include browser-upgrade.html %}
 {% include navigation.html %}
 
-<div class="entry-header">
+<div class="entry-header hentry_custom">
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   {% if page.image.feature %}
     <div class="entry-image">
@@ -27,7 +27,7 @@
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
 
-<div id="main" role="main" class="hentry_custom">
+<div id="main" role="main">
   {{ content }}
 </div><!-- /#main -->
 
