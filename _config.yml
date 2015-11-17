@@ -1,30 +1,44 @@
-title:            zmf
-description:      zmf的个人主页
+title:            雪底藏松
+description:      雪底藏松的blog
 disqus_shortname: minfeizhou
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 url:
+baseurl: ""
 
 # Owner/author information
-owner:
-  name:           zmf
-  avatar:         main.jpg
-  bio:            "传说中的个人简介"
-  email:          chisifang@163.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github: MinfeiZhou
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  weibo: http://weibo.com/zmf1990/home
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
+# owner:
+#   name:           雪底藏松
+#   avatar:         main.jpg
+#   bio:            "传说中的个人简介"
+#   email:          chisifang@163.com
+#   # Social networking links used in footer. Update and remove as you like.
+#   twitter:
+#   facebook:
+#   github: MinfeiZhou
+#   stackexchange:
+#   linkedin:
+#   instagram:
+#   flickr:
+#   tumblr:
+#   weibo: http://weibo.com/zmf1990/home
+#   # google plus id, include the '+', eg +mmistakes
+#   google_plus:
+
+# --- Navigation bar options - start --- #
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/images/tx.jpg"
+
+# List of links in the navigation bar
+navbar-links:
+  首页: ""
+  所有文章: "posts"
+  文章类别: "tags"
+  关于我: "about"
+# --- Navigation bar options - end --- #
 
 # Background image to be tiled on all pages
 background: ricepaper.png
