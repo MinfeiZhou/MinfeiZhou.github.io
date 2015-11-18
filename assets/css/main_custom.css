@@ -1,15 +1,23 @@
+/* body距离顶部的距离 */
 body {
     margin-top: 50px;
 }
 
+/* post页面，没有顶部图片的post距离顶部的距离 */
 .hentry_custom {
     margin-top: 100px;
 }
 
+/* 有顶部图片的页面，顶部图片的最小高度 */
 .entry-image_custom {
     min-height: 300px;
 }
 
+/* 有图post页面，h1距离nav的距离 */
 .header-title-h1_custom {
     margin-top: 40px;
 }
+
+/* 字体 */
+h1, h2, h3, h4, h5, h6 {font-family: ‘Corben’, Georgia, Times, serif;}
+p, div {font-family: ‘Nobile’, Helvetica, Arial, sans-serif;}
