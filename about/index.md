@@ -9,26 +9,10 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-They say three times the charm, so here is another free responsive Jekyll blog theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around.
+小生渣渣研究生一名，在读，算是一个正在接受高等教育的码农，将于2017年7月离开温室，正式迈进社会(IT圈)的滚滚洪流之中，想想还有些小激(hai)动(pa)……
+性格：开朗活泼不是我的菜，秀外慧中当不起，幽默感多少有点儿，性子不急不躁，骨子里是个愤青，内心狂热又略带些文艺……
+爱好：足球，水平一般，看球也少，算不上球迷，就是好这口！
+工作经历：e……基本没有，大四那年在一家培训机构实习过几个月，读研前在一家自称是互联网公司的小公司上过几个月闲班，仅此而已。
+技能：对新鲜技术和事物有较强求知欲，思维不算敏捷，学习能力还算OK；自从那一年被某大学老师带入Java这个坑，就再没有机会爬出去，如今越陷越深，无法自拔，别说你来拯救我，我已无药可救……
+远景：短期目标，由一名程序猿升级成攻城狮，长期目标（5年以上），暂时还不明确；此生夙愿，在有生之年能够看到——码农翻身把歌唱！
 
-If you've used any of [my other themes](http://mademistakes.com/work/jekyll-themes/) most of this should be familiar territory...
-
-## What HPSTR brings to the table:
-
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
-* Modern and minimal design.
-* Sweet animated menu.
-* Background image support.
-* Readable typography to make your words shine.
-* Support for large images to call out your favorite posts.
-* Built-in support for Sass courtesy of Jekyll 2.x.
-* Optional [Disqus](http://disqus.com) comments.
-* Simple and clear permalink structure[^1].
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy.
-
-<div markdown="0"><a href="{{ site.url }}/theme-setup/" class="btn btn-info">Theme Setup</a> <a href="https://github.com/mmistakes/hpstr-jekyll-theme" class="btn btn-success">Download HPSTR</a></div>
-
-[^1]: Example: *domain.com/category-name/post-title*
