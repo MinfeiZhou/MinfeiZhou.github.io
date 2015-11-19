@@ -18,6 +18,10 @@ body {
     margin-top: 40px;
 }
 
+/* 修改post第一段的字体大小 */
+#post .entry-content > p:first-child, #page .entry-content > p:first-child {
+    font-size: 1.15rem;
+}
 /* 字体  */
 /*body, h1, h2, h3, h4, h5, h6 {font-family: ‘Corben’, Georgia, Times, serif;}
 p, div {font-family: ‘Nobile’, Helvetica, Arial, sans-serif;}*/
