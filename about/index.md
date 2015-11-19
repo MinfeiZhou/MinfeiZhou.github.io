@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 一个不想揍上(ke)帝(hu)的程序猿不是好码农……
+title: 一个会敲两行代码的愤青……
 comments: false
 modified: 2015-11-17
 image:
