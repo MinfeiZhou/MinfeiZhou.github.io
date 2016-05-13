@@ -38,7 +38,8 @@ image:
   <div class="entry-content">
     <!-- {{ post.content }} -->
     {{ post.content | truncatewords: 50 }}
-    <a href="{{ post.url | prepend: site.baseurl }}" >[Read&nbsp;More]</a>
+    <!-- <a href="{{ post.url | prepend: site.baseurl }}" >[Read&nbsp;More]</a> -->
+    <a href="{{ site.url }}{{ post.url }}" >[Read&nbsp;More]</a>
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}
