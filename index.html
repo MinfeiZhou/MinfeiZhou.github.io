@@ -45,10 +45,9 @@ image:
 </article><!-- /.hentry -->
 {% endfor %}
 
-<div class="pagination">
+<!-- <div class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-      <!-- <a href="{{ site.url }}" class="btn">Previous</a> -->
       <a href="{{ site.baseurl }}" class="btn">Previous</a>
     {% else %}
       <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
@@ -61,7 +60,6 @@ image:
       {% if paginator.page == 1 %}
         <span class="current-page">1</span>
       {% else %}
-        <!-- <a href="{{ site.url }}">1</a> -->
         <a href="{{ site.baseurl }}">1</a>
       {% endif %}
     </li>
@@ -80,6 +78,7 @@ image:
   {% else %}
     Next
   {% endif %}
-</div><!-- /.pagination -->
+</div> -->
+<!-- /.pagination -->
 
-<!-- {% include pagination.html %} -->
+{% include pagination.html %}
