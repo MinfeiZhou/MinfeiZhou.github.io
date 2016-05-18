@@ -2,7 +2,7 @@ title:            雪底藏松
 description:      雪底藏松的blog
 disqus_shortname: minfeizhou
 reading_time:     true
-words_per_minute: 50
+words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 # 此处的url和baseurl在使用时要注意，有时site.url不好用，需要使用baseurl
