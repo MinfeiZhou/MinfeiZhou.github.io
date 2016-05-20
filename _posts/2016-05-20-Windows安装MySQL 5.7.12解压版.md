@@ -132,11 +132,11 @@ MySQL初始化失败的原因无非就是`my.ini`配置文件中有错误，而�
 ## 5 安装MySQL服务
 运行`mysqld --install`，出现下图提示，则安装成功：
 
-![]({{ site.url }}/images/mysql-install-sucess.png)
+![]({{ site.url }}/images/mysql/mysql-install-sucess.png)
 
 再运行`net start mysql`命令，启动MySQL服务：
 
-![]({{ site.url }}/images/mysql-start-sucess.png)
+![]({{ site.url }}/images/mysql/mysql-start-sucess.png)
 
 如果服务启动失败，说明数据库初始化没有成功，请返回第四步，确保MySQL初始化时成功的。
 
@@ -145,7 +145,7 @@ MySQL初始化失败的原因无非就是`my.ini`配置文件中有错误，而�
 
 启动mysql服务后，在控制台输入`mysql -u root -p`，回车后，输入前文反复强调要记住的随机密码，笔者的随机密码是`.ay5yPyQsuVz`，回车后进入>mysql系统界面，如下：
 
-![]({{ site.url }}/images/mysql-password-1.png)
+![]({{ site.url }}/images/mysql/mysql-password-1.png)
 
 这时，输入命令`set password for root@localhost = password(‘这里填写你的新密码‘)`，便可以重置你的MySQL数据库密码。
 
