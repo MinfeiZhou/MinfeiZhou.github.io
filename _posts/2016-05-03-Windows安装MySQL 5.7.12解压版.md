@@ -12,7 +12,7 @@ modified: 2015-10-03
 系统：Win10 64bit
 
 ## 1 下载安装包
-官方下载地址：<http://dev.mysql.com/downloads/mysql/>;
+官方下载地址：<http://dev.mysql.com/downloads/mysql/>
 
 选择适合自己的版本下载即可。
 
@@ -76,7 +76,38 @@ modified: 2015-10-03
 
 ## MySQL初始化
 
+### 初始化成功
+使用_管理员身份_运行_cmd_，`cd`到MySQL的安装目录，运行命令：`mysqld --initialize --user=mysql --console`，如下图：
 
+![]({{ site.url }}/images/mysql/mysql-init-sucess.png)
+
+在控制台消息尾部会出现随机生成的**初始密码**，这个一定要记住；
+
+该命令的主要作用是初始化MySQL的数据库文件，让其可以正常运行，因此会在MySQL的安装目录下生产`data`文件夹，如图：
+
+![]({{ site.url }}/images/mysql/mysql-data.png)
+
+注意：
+
+- 生产**初始密码**如果没有记住后面会很麻烦，虽然网上有修改初始密码的方法，可以参考[百度经验](http://jingyan.baidu.com/article/e3c78d64b44ef53c4c85f51a.html)，笔者试过2个类似方法，但是……都没有成功；
+- 如果真没有记住这个初始密码，笔者建议重新运行`mysqld --initialize --user=mysql --console`命令，这样相对比较快捷，不过在运行命令之前一定要先将生成的`data`文件夹删除，否则会出现如下错误。
+
+![]({{ site.url }}/images/mysql/mysql-init-error-1.png)
+
+### 初始化失败
+MySQL初始化失败的原因无非就是`my.ini`配置文件中有错误，而自己没有看出来，这时运行命令`mysqld --initialize --user=mysql --console`，会出现以下错误：
+
+![]({{ site.url }}/images/mysql/mysql-init-error-2.png)
+
+可惜，没有给用户一个明确的提示，到底哪儿错了！！！抓狂ing……
+
+这时，可以使用命令`mysqld --console`，它会提示错误源，如下：
+
+![]({{ site.url }}/images/mysql/mysql-console.png)
+
+根据提示可以看出，应该是配置文件中的没有找到`datedir`属性有没有，原来我把`datadir`写成了`datedir`；打开配置文件比较：
+
+![]({{ site.url }}/images/mysql/mysql-datadir.png)
 
 
 ## 参考文章
@@ -86,8 +117,10 @@ modified: 2015-10-03
 - 百度经验: <http://jingyan.baidu.com/article/e3c78d64b44ef53c4c85f51a.html>
 
 
+***
+
 **特别说明：**
 
-1. 本文对以上参考文章有多处引用和借鉴，如有侵权，请留言，小生必改之。
+1. 本文对以上参考文章有多处引用和借鉴，如有侵权，请留言，小生必改之；文中如有错误，也请留言，小生亦改之。
 2. 感谢互联网上所有秉持开源精神、愿意分享知识的前辈，致敬！
 3. 文章转载请注明出处，谢谢。
