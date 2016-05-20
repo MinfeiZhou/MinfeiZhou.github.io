@@ -16,7 +16,7 @@ modified: 2015-10-03
 
 选择适合自己的版本下载即可。
 
-![mysql1]({{ site.url }}/images/mysql1.png)
+![]({{ site.url }}/images/mysql/mysql1.png)
 
 
 
