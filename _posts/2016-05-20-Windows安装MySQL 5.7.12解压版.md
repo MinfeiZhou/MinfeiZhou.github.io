@@ -3,22 +3,26 @@ layout: post
 title: Windows安装MySQL 5.7.12解压版
 description: "Windows(Win10)安装MySQL 5.7.12解压版"
 tags: [MySQL]
-modified: 2015-10-03
+modified: 2016-05-20
 ---
 
 > 手上的笔记本已经近2年没有重装过系统，最近终于无法它的龟速，毅然决然的刷了一个win10，没想到重装系统后，我这台渣渣笔记本的开机时间居然杀进了20秒内，真是亮瞎了我的钛合金！对于一个小码农，重装系统之后的软件安装总是让人泪奔，太繁琐，还经常出一些棘手的问题，比如小生我，在安装MySQL时总是报错，真心不知道怎么回事，不得已，安装了解压版的MySQL，当然了，过程并不顺利，不过还是瞎猫撞上死耗子，让我给蒙上了……
 
 ## 0 本机环境
+
 系统：Win10 64bit
 
 ## 1 下载安装包
+
 官方下载地址：<http://dev.mysql.com/downloads/mysql/>
 
 选择适合自己的版本下载即可。
 
 ![]({{ site.url }}/images/mysql/mysql1.png)
 
+
 ## 2 MySQL配置
+
 解压下载好的压缩包`mysql-5.7.12-winx64.zip`，找到配置文件`my-default.ini`，文件初始内容如下：
 
     # For advice on how to change settings please see
@@ -67,16 +71,20 @@ modified: 2015-10-03
     character-set-server = utf8
 
 注意：
+
 - 修改完配置文件之后要将文件没那个改为`my.init`；
 - `basedir`和`datadir`两个属性要填写你自己的MySQL解压路径，笔者的解压路径是`E:\DevelopmentSoftwares\mysql-5.7.12-winx64`，亲测证实，这两个属性也可以不配置，如果不配置，在MySQL初始化时会在其解压目录下生成`data`文件夹；
 - 配置文件一定不能写错，如果配置错误，会出现不太爽的错误提示，后面会提到笔者配置时遇到的一些坑。
 
-## 环境变量
+
+## 3 环境变量
+
 右键计算机->属性->高级系统设置->环境变量；在系统变量里找到path，选择编辑，在原有值末尾添加MySQL的bin文件夹路径，笔者的路径是`E:\DevelopmentSoftwares\mysql-5.7.12-winx64\bin`。
 
-## MySQL初始化
 
-### 初始化成功
+## 4 MySQL初始化
+
+### 4.1 初始化成功
 使用_管理员身份_运行_cmd_，`cd`到MySQL的安装目录，运行命令：`mysqld --initialize --user=mysql --console`，如下图：
 
 ![]({{ site.url }}/images/mysql/mysql-init-sucess.png)
@@ -94,7 +102,7 @@ modified: 2015-10-03
 
 ![]({{ site.url }}/images/mysql/mysql-init-error-1.png)
 
-### 初始化失败
+### 4.2 初始化失败
 MySQL初始化失败的原因无非就是`my.ini`配置文件中有错误，而自己没有看出来，这时运行命令`mysqld --initialize --user=mysql --console`，会出现以下错误：
 
 ![]({{ site.url }}/images/mysql/mysql-init-error-2.png)
@@ -105,9 +113,45 @@ MySQL初始化失败的原因无非就是`my.ini`配置文件中有错误，而�
 
 ![]({{ site.url }}/images/mysql/mysql-console.png)
 
-根据提示可以看出，应该是配置文件中的没有找到`datedir`属性有没有，原来我把`datadir`写成了`datedir`；打开配置文件比较：
+根据提示可以看出，应该是配置文件中的没有找到`datedir`属性有没有，打开配置文件比较：
 
 ![]({{ site.url }}/images/mysql/mysql-datadir.png)
+
+原来我把`datadir`写成了`datedir`，导致MySQL在初始化时无法定位`datadir`属性对应的路径，修改以后再运行命令`mysqld --initialize --user=mysql --console`：
+
+![]({{ site.url }}/images/mysql/mysql-init-sucess.png)
+
+成功。
+
+注意：
+
+- 可见MySQL初始化成功与失败，最主要的区别就在于有没有生成的随机密码，如果没有生成，则初始化失败；当然了，如果你使用的初始化命令不是`mysqld --initialize --user=mysql --console`，而是`mysqld --initialize`，那肯定也是显示不出随机密码的。建议使用`mysqld --initialize --user=mysql --console`命令。
+- 有的博文中提到如果`my.ini`文件配置错误，在运行`mysqld --initialize --user=mysql --console`命令是会提示一个有数字的错误，但是笔者没有遇到过，这里就没办法演示了，如果有朋友遇到了，可以参考本文的方法，排查错误，应该有效；总之，如果MySQL初始化失败，八成是`my.ini`配置出错了，一定要好好比较一下。
+
+
+## 5 安装MySQL服务
+运行`mysqld --install`，出现下图提示，则安装成功：
+
+![]({{ site.url }}/images/mysql-install-sucess.png)
+
+再运行`net start mysql`命令，启动MySQL服务：
+
+![]({{ site.url }}/images/mysql-start-sucess.png)
+
+如果服务启动失败，说明数据库初始化没有成功，请返回第四步，确保MySQL初始化时成功的。
+
+
+### 6 修改密码
+
+启动mysql服务后，在控制台输入`mysql -u root -p`，回车后，输入前文反复强调要记住的随机密码，笔者的随机密码是`.ay5yPyQsuVz`，回车后进入>mysql系统界面，如下：
+
+![]({{ site.url }}/images/mysql-password-1.png)
+
+这时，输入命令`set password for root@localhost = password(‘这里填写你的新密码‘)`，便可以重置你的MySQL数据库密码。
+
+至此，本文结束。
+
+
 
 
 ## 参考文章
